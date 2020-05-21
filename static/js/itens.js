@@ -10,7 +10,7 @@ function renderFrutas() {
     for (fruta of frutas) {
         var frutasElement = document.createElement('li')
         frutasElement.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center')
-        frutasElement.style = "width: 100%; margin-bottom: 1%;"
+        frutasElement.style = "width: 100%; margin-bottom: 1%; margin-top: 1%;"
         var frutasText = document.createTextNode(fruta)
         frutasElement.appendChild(frutasText);
         
