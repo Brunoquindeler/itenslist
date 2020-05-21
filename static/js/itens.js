@@ -33,11 +33,14 @@ renderFrutas();
 function addFrutas() {
     var frutasText = inputElement.value;
 
-    if (frutasText != '') {
-    frutas.push(frutasText);
-    inputElement.value = '';
-    renderFrutas();
-    saveToStorage();
+    if (frutasText == '' || frutasText.length > 20) {
+        alert("Campo vazio ou muito grande...")
+    } else {
+        frutas.push(frutasText);
+        inputElement.value = '';
+        renderFrutas();
+        saveToStorage();
+        console.log(frutasText.length)
     }
 };
 
