@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/style/style.css">
+    <title>Lista de Itens</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Bruno Quindeler</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="about.html"><button type="button" class="btn btn-success">About</button></a>
+                </li> -->
+            </ul>
+            <!-- <span class="navbar-text">
+              Dark Mode: &ensp; <button class="btn btn-success" id="btn-dm">ON</button>
+            </span> -->
+        </div>
+    </nav>
+
+    <hr>
+
+    <div id="app" class="container-fluid text-center">
+        <div class="alert alert-success" role="alert">
+            <h1>Lista de itens</h1>
+            <p>O Lista de itens foi um projeto realizado no curso de <b>JavaScript</b> do módulo <b>Starter</b> da  <a href="https://rocketseat.com.br" target="_blank"><button type="button" class="btn btn-li"><i class="fas fa-link"> RocketSeat</i></button></a>, o objetivo é poder adicionar e  remover itens da lista utilizando apenas <b>JavaScript</b>, tendo muito conteúdo sobre manipulação da DOM, aproveitei e adicionei estilização com <a href="http://getbootstrap.com" target="_blank"><button type="button" class="btn btn-li"><i class="fas fa-link"> BootsTrap</i></button></a> e <a href="http://fontawesome.com"><button type="button" class="btn btn-li"><i class="fas fa-link"> FontAwesome</i></button></a></p>
+        </div>
+
+        <hr>
+
+        <div class="row justify-content-md-center">
+            <div class="card" style="width: 30%;">
+                <div>
+                    <ul id="list" class="list-group mx-auto" style="width: 100%;"></ul>
+                </div>    
+        
+                <br>
+                <div class="input-group mb-3">
+                    <input id="inputAdd" type="text" class="form-control" placeholder="Nome do item" aria-label="Nome do item" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button id="add" class="btn btn-success" type="button" id="button-addon2">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div class="alert alert-success text-center" role="alert">
+
+            <div class="card">
+                <img class="ajusteimgmain" src="./static/images/perfildogs.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Bruno Quindeler</h5>
+                  <p class="card-text">Olá, sou <b>Analista de Redes</b> e curso <b>Gestão de T.I</b> na <b>UNESA</b>, meu dia a dia no trabalho é configurar <b>Switchs</b> e <b>Routers</b>, dar suporte a clientes e realizar Troubleshoots no Backbone, também configuro e mantenho servidores <b>Linux</b> para levantar algumas aplicações, dentre elas, <b>Zabbix + Grafana</b>, <b>DNS Unbound</b>... Ultimamente tenho focado em aprender programação para expandir minha área de conhecimentos</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h4 class="alert-heading">Muito obrigado!</h4>
+            <p>Foi um prazer apresentar a vocês esse projeto, visite também minhas redes sociais.</p>
+            <a href="https://facebook.com/brunoquindeler" target="_blank"><button type="button" class="btn btn-fb"><i class="fab fa-facebook"></i></button></a>
+            <a href="https://twitter.com/BQuindeler" target="_blank"><button type="button" class="btn btn-tw"><i class="fab fa-twitter"></i></button></a>
+            <a href="https://www.linkedin.com/in/brunofq" target="_blank"><button type="button" class="btn btn-li"><i class="fab fa-linkedin-in"></i></button></a>
+            <a href="https://www.instagram.com/brunoquindeler" target="_blank"><button type="button" class="btn btn-ins"><i class="fab fa-instagram"></i></button></a>
+            <a href="https://www.github.com/brunoquindeler" target="_blank"><button type="button" class="btn btn-git"><i class="fab fa-github"></i></button></a>
+            <a href=" http://api.whatsapp.com/send?1=pt_BR&phone=5522981183060" target="_blank"><button type="button" class="btn btn-whatsapp"><i class="fab fa-whatsapp pr-1"></i></button></a>
+            <hr>
+            <p class="mb-0"><strong>&copy Bruno Quindeler - 2020</strong></p>
+        </div>
+    </footer>
+
+
+<script src="./static/js/itens.js"></script>
+<script src="https://kit.fontawesome.com/70a54bf5aa.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
