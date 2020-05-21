@@ -9,7 +9,7 @@ function renderFrutas() {
 
     for (fruta of frutas) {
         var frutasElement = document.createElement('li')
-        frutasElement.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center')
+        frutasElement.setAttribute('class', 'list-group-item list-group-item-primary d-flex justify-content-between align-items-center')
         frutasElement.style = "width: 100%; margin-bottom: 1%; margin-top: 1%;"
         var frutasText = document.createTextNode(fruta)
         frutasElement.appendChild(frutasText);
@@ -35,8 +35,15 @@ function addFrutas() {
 
     var conteudo = frutas.indexOf(frutasText) != -1 ? 'True' : 'False';
 
-    if (frutasText == '' || frutasText.length > 20 || conteudo == 'True') {
-        alert("Campo vazio, já existe ou muito grande...")
+
+    if (frutasText == ''){
+        alert("Campo vazio...");
+        inputElement.value = '';
+    } else if (frutasText.length > 20) {
+        alert("Palavra muito grande...");
+        inputElement.value = '';
+    } else if (conteudo == 'True') {
+        alert("Item já existe...");
         inputElement.value = '';
     } else {
         frutas.push(frutasText);
@@ -45,6 +52,17 @@ function addFrutas() {
         saveToStorage();
         console.log(frutasText.length)
     }
+
+    // if (frutasText == '' || frutasText.length > 20 || conteudo == 'True') {
+    //     alert("Campo vazio, já existe ou muito grande...")
+    //     inputElement.value = '';
+    // } else {
+    //     frutas.push(frutasText);
+    //     inputElement.value = '';
+    //     renderFrutas();
+    //     saveToStorage();
+    //     console.log(frutasText.length)
+    // }
 };
 
 buttonElement.onclick = addFrutas;
