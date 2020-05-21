@@ -58,3 +58,10 @@ function deleteFruta(pos) {
 function saveToStorage() {
     localStorage.setItem('list_frutas', JSON.stringify(frutas))
 }
+
+inputElement.addEventListener('keyup', function(e){
+  var key = e.which || e.keyCode;
+  if (key == 13) { // codigo da tecla enter
+    addFrutas()
+  }
+});
