@@ -35,6 +35,7 @@ function addFrutas() {
 
     if (frutasText == '' || frutasText.length > 20) {
         alert("Campo vazio ou muito grande...")
+        inputElement.value = '';
     } else {
         frutas.push(frutasText);
         inputElement.value = '';
