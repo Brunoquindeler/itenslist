@@ -9,7 +9,7 @@ function renderFrutas() {
 
     for (fruta of frutas) {
         var frutasElement = document.createElement('li')
-        frutasElement.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center font-weight-bold text-monospace')
+        frutasElement.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center')
         frutasElement.style = "width: 100%; margin-bottom: 1%; margin-top: 1%;"
         var frutasText = document.createTextNode(fruta)
         frutasElement.appendChild(frutasText);
@@ -33,8 +33,10 @@ renderFrutas();
 function addFrutas() {
     var frutasText = inputElement.value;
 
-    if (frutasText == '' || frutasText.length > 20) {
-        alert("Campo vazio ou muito grande...")
+    var conteudo = frutas.indexOf(frutasText) != -1 ? 'True' : 'False';
+
+    if (frutasText == '' || frutasText.length > 20 || conteudo == 'True') {
+        alert("Campo vazio, já existe ou muito grande...")
         inputElement.value = '';
     } else {
         frutas.push(frutasText);
