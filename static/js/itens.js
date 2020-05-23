@@ -47,7 +47,6 @@ function addItens() {
 
     var conteudo = itens.indexOf(itensText) != -1 ? 'True' : 'False';
 
-
     if (itensText == ''){
         alert("Campo vazio...");
         inputElement.value = '';
@@ -60,6 +59,7 @@ function addItens() {
     } else {
         itens.push(itensText);
         inputElement.value = '';
+        itens.sort();
         renderItens();
         saveToStorage();
         console.log(itensText.length)
