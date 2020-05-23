@@ -1,6 +1,7 @@
 var listElement = document.querySelector('#list');
 var inputElement = document.querySelector('#inputAdd');
 var buttonElement = document.querySelector('#add');
+var buttonDelete = document.querySelector('#delete');
 
 var items = JSON.parse(localStorage.getItem('list_items')) || [];
 
@@ -86,9 +87,18 @@ function deleteItem(pos) {
     saveToStorage();
 };
 
+function deleteAll() {
+    items.splice(0, Number.MAX_VALUE);
+    renderItems();
+    saveToStorage();
+    // console.log(items);
+};
+
+buttonDelete.onclick = deleteAll;
+
 function saveToStorage() {
     localStorage.setItem('list_items', JSON.stringify(items))
-}
+};
 
 inputElement.addEventListener('keyup', function(e){
   var key = e.which || e.keyCode;
