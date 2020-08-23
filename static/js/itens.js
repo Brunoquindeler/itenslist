@@ -10,22 +10,33 @@ function renderItems() {
 
     for (item of items) {
         var itemsElement = document.createElement('li')
-        itemsElement.setAttribute('class', 'list-group-item list-group-item-primary d-flex justify-content-between align-items-center')
+        
+        itemsElement.setAttribute('class', 'list-group-item d-flex justify-content-between align-items-center')
         itemsElement.style = "width: 100%; margin-bottom: 1%; margin-top: 1%;"
-        var itemsText = document.createTextNode(item)
+
+        
+        var itemCheck = document.createElement('input');
+        itemCheck.setAttribute('type', 'checkbox');
+        // itemCheck.setAttribute('id', item);
+        itemsElement.appendChild(itemCheck);
+        
+        var itemsText = document.createTextNode(item);
         itemsElement.appendChild(itemsText);
         
         var linkElement = document.createElement('a');
         linkElement.setAttribute('href', '#');
         linkElement.setAttribute('class', 'badge badge-danger badge-pill');
         var linkText = document.createTextNode('Excluir');
-        linkElement.appendChild(linkText);       
+        linkElement.appendChild(linkText);  
+        
+
         
         var pos = items.indexOf(item);
         linkElement.setAttribute('onclick', 'deleteItem(' + pos +')');
 
         listElement.appendChild(itemsElement);
         itemsElement.appendChild(linkElement);
+        
     }
 };
 
